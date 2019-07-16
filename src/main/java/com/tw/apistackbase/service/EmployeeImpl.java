@@ -1,9 +1,10 @@
 package com.tw.apistackbase.service;
 
 import com.tw.apistackbase.model.Employee;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public interface EmployeeImpl {
     List<Employee> getEmployees();
 

@@ -3,7 +3,7 @@ package com.tw.apistackbase.repository;
 
 import com.tw.apistackbase.model.Company;
 import com.tw.apistackbase.model.Employee;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Repository
 public class CompanyRepository {
 
-    private static Map<String, Company> companies = new HashMap<>();
+    public static Map<String, Company> companies = new HashMap<>();
 
     static {
         companies.put("1", createCompany("alibaba"));
