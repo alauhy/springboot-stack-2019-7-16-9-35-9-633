@@ -19,6 +19,6 @@ public interface CompanyImpl {
 
     void update(String companyID, Company company);
 
-    void delete(String companyID, Company company);
+    void delete(String companyID);
 
 }

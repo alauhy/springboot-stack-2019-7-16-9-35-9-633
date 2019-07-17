@@ -29,7 +29,7 @@ public class CompanyController {
         return companyService.getEmployees(companyID);
     }
 
-    @GetMapping(path="/companies",params = "page,pageSize")
+    @GetMapping(path="/companies",params = {"page","pageSize"})
     public List<Company> showCompanies(@RequestParam int page,@RequestParam int pageSize){
         return companyService.paging(page,pageSize);
     }
@@ -39,14 +39,14 @@ public class CompanyController {
         companyService.addCompany(company);
     }
 
-    @PutMapping("/companies/{companiesID}")
+    @PutMapping("/companies/{companyID}")
     public void updateCompany(@PathVariable String companyID,@RequestBody Company company){
         companyService.update(companyID,company);
     }
-    @DeleteMapping("/companies/{companiesID}")
+    @DeleteMapping("/companies/{companyID}")
 
-    public void deleteCompany(@PathVariable String companyID,@RequestBody Company company){
-        companyService.delete(companyID,company);
+    public void deleteCompany(@PathVariable String companyID){
+        companyService.delete(companyID);
     }
 
 }

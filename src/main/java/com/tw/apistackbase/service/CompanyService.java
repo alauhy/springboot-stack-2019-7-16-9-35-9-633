@@ -43,7 +43,7 @@ public class CompanyService implements CompanyImpl{
     }
 
     @Override
-    public void delete(String companyID, Company company) {
+    public void delete(String companyID) {
         companyRepository.deleteEmployee(companyID);
 
     }

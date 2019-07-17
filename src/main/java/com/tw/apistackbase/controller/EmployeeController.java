@@ -22,7 +22,7 @@ public class EmployeeController {
         return employeeService.findById(employeeID);
     }
 
-    @GetMapping(path = "/employees", params = "page,pageSize")
+    @GetMapping(path = "/employees", params = {"page","pageSize"})
     public List<Employee> paging(@RequestParam int page, @RequestParam int pageSize) {
         return employeeService.paging(page, pageSize);
     }
